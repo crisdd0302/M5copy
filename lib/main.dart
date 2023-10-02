@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("Flutter Cloud Database"),
+          title: const Text("Flutter Realtime"),
         ),
         body: const PeopleWidget(),
       ),
