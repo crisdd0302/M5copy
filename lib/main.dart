@@ -1,8 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:loggy/loggy.dart';
-
 import 'domain/geo_controller.dart';
 import 'domain/people_controller.dart';
 import 'ui/people_widget.dart';
@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
     Get.put(GeoController());
 
     return GetMaterialApp(
-      title: 'Flutter Cloud Database',
+      title: 'Flutter Realtime',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,

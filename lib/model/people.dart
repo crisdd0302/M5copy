@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_database/firebase_database.dart';
 
 class People {
   String? key;
@@ -7,10 +8,7 @@ class People {
   String longitude;
   late DocumentReference reference;
 
-  People(
-      {required this.name,
-      required this.latitude,
-      required this.longitude});
+  People({required this.name, required this.latitude, required this.longitude});
 
   People.fromMap(Map<String, dynamic> map, {required this.reference})
       : assert(map['name'] != null),
@@ -25,10 +23,6 @@ class People {
             reference: snapshot.reference);
 
   toJson() {
-    return {
-      'name': name,
-      'latitude': latitude,
-      'longitude': longitude
-    };
+    return {'name': name, 'latitude': latitude, 'longitude': longitude};
   }
 }
